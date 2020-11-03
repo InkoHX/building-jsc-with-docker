@@ -27,6 +27,6 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /workspaces/WebKit/WebKitBuild/Release/bin/jsc /usr/local/bin/jsc
+COPY --from=builder /workspaces/WebKit/WebKitBuild/Release/bin/jsc /usr/local/bin/
 
 ENTRYPOINT [ "jsc" ]
